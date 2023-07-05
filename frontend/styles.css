@@ -1,0 +1,24 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#linksNav a{
+  text-decoration: none;
+  color: gray;
+  font-size: 1.2rem;
+}
+
+.content{
+  width: 90%;
+  margin: 2rem auto;
+}
+
+footer{
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
