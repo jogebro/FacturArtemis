@@ -73,7 +73,7 @@
     </table>
   </div>
 
-  <!-- Modal -->
+  <!-- Modal Insert -->
   <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -105,8 +105,40 @@
     </div>
   </div>
 
+  <!-- Modal Update -->
+  <div class="modal fade" id="updateCatg" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Update Categoria</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="registrarCatg" method="POST">
+            <div class="mb-3 col-12">
+              <label for="nombreCatg" class="col-form-label">Nombre:</label>
+              <input type="text" class="form-control" id="nombreCatg">
+            </div>
+            <div class="mb-3 col-12">
+              <label for="descripcionCatg" class="col-form-label">Descripcion:</label>
+              <input type="text" class="form-control" id="descripcionCatg">
+            </div>
+            <div class="mb-3 col-12">
+              <label for="imgCatg" class="col-form-label">Imagen:</label>
+              <input type="text" class="form-control" id="imgCatg">
+            </div>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+  </div>
+
   <footer class="bg-dark">
-    <h5>FacturArtemis+ © Copyrigth - Derechos reservados a Joel Santiago Abril</h5>
+    <h5>FacturArtemis+ ©2023 Copyrigth - Derechos reservados a Joel Santiago Abril</h5>
   </footer>
   
   <script src="categorias.js" type="module"></script>

@@ -21,7 +21,7 @@ async function listCategorias(){
             <td>${CategoriaNombre}</td>
             <td>${Descripcion}</td>
             <td>${Imagen}</td>
-            <td><button class="btn btn-primary">Actualizar</button></td>
+            <td><button class="btn btn-primary class="btn btn-dark mb-2" data-bs-toggle="modal" data-bs-target="#updateCatg"">Actualizar</button></td>
             <td><button class="btn btn-danger delete" id="${CategoriaID}">Borrar</button></td>
         </tr>
         `
