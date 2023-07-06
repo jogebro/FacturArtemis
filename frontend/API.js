@@ -1,4 +1,4 @@
-const url = "http://localhost:5000/api/categorias/";
+const url = "http://localhost:5000/api/categorias";
 
 
 export const obtainCategories = async () => {
@@ -16,10 +16,10 @@ export const nuevaCategoria = async (registCatg) => {
     try {
         await fetch(url,{
             method: "POST",
-            body:JSON.stringify(registCatg),
             headers:{
                 "Content-Type":"application/json"
-            }
+            },
+            body:JSON.stringify(registCatg)
         })
         window.location.href="categorias.html"
     } catch (error) {
@@ -29,7 +29,18 @@ export const nuevaCategoria = async (registCatg) => {
 
 
 export const deleteCategory = async (id) => {
-  
+    try {
+        await fetch(url,{
+            method: "DELETE",
+            headers:{
+                "Content-Type":"application/json"
+            },
+            body:JSON.stringify(id)
+        })
+        window.location.href="categorias.html"
+    } catch (error) {
+        console.log(error);
+    }
 };
 
 

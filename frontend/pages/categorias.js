@@ -21,7 +21,7 @@ async function listCategorias(){
             <td>${Descripcion}</td>
             <td>${Imagen}</td>
             <td><button class="btn btn-primary">Actualizar</button></td>
-            <td><button class="btn btn-danger">Borrar</button></td>
+            <td><button class="btn btn-danger" id="${CategoriaID}">Borrar</button></td>
         </tr>
         `
     });
@@ -34,23 +34,17 @@ formCatg.addEventListener('submit', newCatg)
 function newCatg(e){
     e.preventDefault();
 
-    const nombreCatg=document.querySelector("#nombreCatg").value
-    console.log(nombreCatg);
-    const descripcionCatg=document.querySelector("#descripcionCatg").value
-    console.log(descripcionCatg);
-    const imgCatg=document.querySelector("#imgCatg").value
-    console.log(imgCatg);
+    const CategoriaNombre=document.querySelector("#nombreCatg").value
+    const Descripcion=document.querySelector("#descripcionCatg").value
+    const Imagen=document.querySelector("#imgCatg").value
 
     const registCatg = {
-        nombreCatg,
-        descripcionCatg,
-        imgCatg
+        CategoriaNombre,
+        Descripcion,
+        Imagen
     }
-
-    alert("xd")
     
     nuevaCategoria(registCatg);
-
 }
 
 /* ELIMINAR CATEGORIA  - CRUD (D) */
