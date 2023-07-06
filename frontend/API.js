@@ -30,12 +30,8 @@ export const nuevaCategoria = async (registCatg) => {
 
 export const deleteCategory = async (id) => {
     try {
-        await fetch(url,{
-            method: "DELETE",
-            headers:{
-                "Content-Type":"application/json"
-            },
-            body:JSON.stringify(id)
+        await fetch(`${url}/${id}`,{
+            method: "DELETE"
         })
         window.location.href="categorias.html"
     } catch (error) {

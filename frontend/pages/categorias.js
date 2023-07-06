@@ -1,6 +1,7 @@
 import {
     obtainCategories,
-    nuevaCategoria
+    nuevaCategoria,
+    deleteCategory
 } from "../API.js";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -21,7 +22,7 @@ async function listCategorias(){
             <td>${Descripcion}</td>
             <td>${Imagen}</td>
             <td><button class="btn btn-primary">Actualizar</button></td>
-            <td><button class="btn btn-danger" id="${CategoriaID}">Borrar</button></td>
+            <td><button class="btn btn-danger delete" id="${CategoriaID}">Borrar</button></td>
         </tr>
         `
     });
@@ -48,7 +49,18 @@ function newCatg(e){
 }
 
 /* ELIMINAR CATEGORIA  - CRUD (D) */
+const tabla = document.getElementById("categories");
+tabla.addEventListener('click', deleteCatg)
 
+function deleteCatg(e) {
+    if (e.target.classList.contains('delete')) {
+        const id = e.target.getAttribute('id');
+        const confirmar = confirm("Are you sure you want to delete this category?")
+        if(confirmar){
+            deleteCategory(id)
+        }
+    }
+}
 
 
 //EDITAR CATEGORIA - CRUD (U)
