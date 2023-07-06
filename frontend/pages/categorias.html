@@ -93,7 +93,7 @@
             </div>
             <div class="mb-3 col-12">
               <label for="imgCatg" class="col-form-label">Imagen:</label>
-              <input type="text" class="form-control" id="imgCatg">
+              <input accept="image/*" type="file" multiple class="form-control" id="imgCatg">
             </div>
             <button type="submit" class="btn btn-primary">Guardar</button>
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -138,7 +138,7 @@
   </div>
 
   <footer class="bg-dark">
-    <h5>FacturArtemis+ ©2023 Copyrigth - Derechos reservados a Joel Santiago Abril</h5>
+    <h5>FacturArtemis+ ©<span id="yearActual"></span> Copyrigth - Derechos reservados a Joel Santiago Abril</h5>
   </footer>
   
   <script src="categorias.js" type="module"></script>

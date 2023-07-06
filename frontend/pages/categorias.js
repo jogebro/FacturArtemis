@@ -4,6 +4,9 @@ import {
     deleteCategory
 } from "../API.js";
 
+// Year en footer actual 
+document.getElementById("yearActual").textContent = new Date().getFullYear();
+
 document.addEventListener("DOMContentLoaded", () => {
     listCategorias()
 });
