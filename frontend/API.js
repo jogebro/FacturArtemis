@@ -39,6 +39,16 @@ export const deleteCategory = async (id) => {
     }
 };
 
+export const editarCategory = async (UpdCatg) => {
+    try {
+        await fetch(`${url}/${UpdCatg}`,{
+            method: "PUT"
+        })
+        window.location.href="categorias.html"
+    } catch (error) {
+        console.log(error);
+    }
+};
 
 
 export const obtenerCategory = async (id) => {
@@ -47,9 +57,6 @@ export const obtenerCategory = async (id) => {
 
 
 
-export const editarCategory = async (category) => {
- 
-};
 
 
 
